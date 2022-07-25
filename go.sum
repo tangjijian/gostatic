@@ -1,0 +1,6 @@
+github.com/aofei/cameron v1.2.0 h1:vr9iVSQ35hfje9bAc1OzB14bprki1xgz+IO5t0XAl0k=
+github.com/aofei/cameron v1.2.0/go.mod h1:JtZPYqiOYbhDAI4xBlcc2Tv6dcHAugJW6vSqwNoQDO4=
+github.com/cespare/xxhash/v2 v2.1.2 h1:YRXhKfTDauu4ajMg1TPgFO5jnlC2HCbmLXMcTG5cbYE=
+github.com/cespare/xxhash/v2 v2.1.2/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
+github.com/petermattis/goid v0.0.0-20220712135657-ac599d9cba15 h1:4lW1DeHHRUzImL9Uz2Fa4j7IIJr+7FNfzjSJxGSZz/k=
+github.com/petermattis/goid v0.0.0-20220712135657-ac599d9cba15/go.mod h1:pxMtw7cyUw6B2bRH0ZBANSPg+AoSud1I1iyJHI69jH4=
