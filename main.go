@@ -13,6 +13,7 @@ import (
 	"static/constant"
 	"static/goroutinePool"
 	"static/goroutineQps"
+	"static/gosync"
 	"static/gotostatment"
 	"static/interfacestatment"
 	"static/pointer"
@@ -23,16 +24,50 @@ import (
 	"static/tcpip"
 	"static/ticker"
 	"static/timer"
+	"static/types"
 	"static/wggroup"
+	"sync"
 	"time"
 	"unsafe"
 )
+
+var wg sync.WaitGroup
 
 func Hello() {
 	defer tcpip.Wg.Done()
 	fmt.Println("Hello World")
 }
 func main() {
+	t0 := types.NewT0()
+	t1 := types.NewT1()
+	fmt.Printf("%T\n", t0)
+	fmt.Printf("%T\n", t1)
+	fmt.Println(t1.Add())
+}
+func main24() {
+	//m := new([2]int)
+	//fmt.Printf("%T", m)
+	data := [...]int{0, 1, 2, 3, 4, 10: 1}
+	s := data[:2:3]
+	fmt.Printf("%d,cap=%d", len(data), cap(data))
+	fmt.Println(data)
+	fmt.Println(s)
+}
+func main23() {
+	gosync.ThreadUnSafeMap()
+}
+func main22() {
+	wg.Add(1)
+	go gosync.Init(&wg) // wg是结构体，传递时需要传递指针
+
+	wg.Wait()
+	fmt.Println("main func")
+}
+func main21() {
+	goroutineQps.RWInit()
+
+}
+func main20() {
 	goroutineQps.Init()
 }
 func main19() {
